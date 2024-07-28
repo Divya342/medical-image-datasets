@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-opacity: 0.5;
+}
+
+/* Header styles */
+header {
+    background-color: #1a237e;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+/* Sidebar styles */
+#sidebar {
+    background-color: #1a237e;
+    color: #fff;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 60px 20px 20px 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+#sidebar.show {
+    transform: translateX(0);
+}
+
+#sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar nav ul li {
+    margin: 20px 0;
+}
+
+#sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Main content styles */
+main {
+    margin-top: 60px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 60px auto 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #1a237e;
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1a237e;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    main {
+        margin-top: 100px;
+        padding: 15px;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    #sidebar.show {
+        transform: translateY(0);
+    }
+
+    #sidebar nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
